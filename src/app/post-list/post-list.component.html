@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="list-group" style="width: 100%">
+      <h2>Posts</h2>
+        <app-post *ngFor="let post of posts; let i = index"
+                  [title]="post.title"
+                  [content]="post.content"
+                  [dateCreation]="post.dateCreation"
+                  [like]="post.like"
+                  [index]="i"
+                  [id]="post.id"
+                  (onPostDeleted)="updateAfterDelete($event)"
+                  (onReloadClicked)="reloadPosts($event)"></app-post>
+        <app-empty-list-message *ngIf="posts.length == 0"></app-empty-list-message>
+    </div>
+  </div>
+</div>

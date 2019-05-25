@@ -1,0 +1,23 @@
+<div class="list-group-item list-group-item-action flex-column align-items-start">
+  <div class="d-flex w-100 justify-content-between">
+    <div class="col-xs-6">
+      <h5 class="mb-1">{{title}}</h5>
+    </div>
+    <div class="col-xs-6">
+        <small>
+          <span class="badge badge-info float-right">{{dateCreation | date:'medium'}}</span>
+        </small>
+
+        <small>
+          <span class="badge badge-success float-right">{{like}}</span>
+        </small>
+    </div>
+    <!--<h5 class="mb-1">{{title}}</h5>-->
+
+    <!--<small><span class="badge badge-info float-right">{{dateCreation | date:'medium'}}</span> <span class="badge badge-success float-right">{{like}}</span></small>-->
+  </div>
+  <p class="mb-1">{{content}}</p>
+  <button type="button" class="btn btn-outline-success" (click)="likeIt()">Like it</button>
+  <button type="button" class="btn btn-outline-danger" (click)="unLikeIt()">Unlike it</button>
+  <button type="button" class="btn btn-outline-danger float-right" (click)="deletePost()">Supprimer post</button>
+</div>
